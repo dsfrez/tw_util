@@ -1,0 +1,42 @@
+/* div, p */
+div {
+    //
+}
+div.div_small_font {
+    font-size: 80%;
+}
+
+/* table */
+table {
+    width:100%;
+    table-layout: fixed;
+    text-align: center;
+    border-collapse: collapse;
+    border: 0px;
+    background-color: #fff;
+    font-size: 80%;
+}
+td {
+    border-collapse: collapse;
+    border: 1px solid #BAC8B4;
+    font-size: 90%;
+}
+td.table_input {
+    background-color: #D9EAD3;
+}
+td.table_input2 {
+    background-color: #FFF2CC;
+}
+input {
+    border: 0px;
+    text-align: center;
+    background-color: #D9EAD3;
+}
+
+input.table_input {
+    width: 100%;
+}
+input.table_input2 {
+    width: 100%;
+    background-color: #FFF2CC;
+}
