@@ -5,7 +5,7 @@
 // 시작 함수 -> 페이지 로딩 시 호출 됨.
 function startTwStatus() {
     // tales weave 정보 초기화
-    init_tw_info();
+    initTwInfo();
     
     // print test url
     testLink = document.createElement("a");

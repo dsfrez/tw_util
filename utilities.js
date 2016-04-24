@@ -149,3 +149,10 @@ function addInputCheckBox(target, id, name, func) {
         refreshPage();
     }
 }
+
+function addSelelctOption(selectElem, value, isDefault) {
+    option = document.createElement("option");
+    option.value = value;
+    option.innerHTML = value;
+    selectElem.appendChild(option);
+}

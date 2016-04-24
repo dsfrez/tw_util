@@ -1,7 +1,7 @@
 function calcDamageMain() {
     resultOutput = document.createElement("div");
     document.getElementById(idResultMain).appendChild(resultOutput);
-    
+
 }
 
 // 사용자의 대미지 정보를 계산하기 위해서 기초 정보를 입력 받음
@@ -69,19 +69,6 @@ function inputDamageCalcOption() {
     info_space.rowSpan = statList.length+1;
     line.appendChild(info_space);
     
-    info_space_div = document.createElement("div");
-    info_space.appendChild(info_space_div);
-    info_space_div.style.textAlign = "left";
-
-    char_info_cell = document.createElement("span");
-    info_space_div.appendChild(char_info_cell);
-    char_info_cell.innerHTML = "캐릭터 정보 입력";
-    
-    monster_info_cell = document.createElement("span");
-    info_space_div.appendChild(monster_info_cell);
-    monster_info_cell.innerHTML = "대상 몬스터 정보";
-
-    
     for (i = 0; i < statList.length; i++) {
         row = document.createElement("tr");
         tableMain.appendChild(row);
@@ -99,4 +86,22 @@ function inputDamageCalcOption() {
         addInputNumberElement2
             (user_input, getUserInputStatSumId(i), getUserInputStatSumName(i), calcDamageMain);
     }
+
+    // 3. info space
+    info_space_div = document.createElement("div");
+    info_space.appendChild(info_space_div);
+    info_space_div.style.textAlign = "left";
+
+    char_info_cell = document.createElement("span");
+    info_space_div.appendChild(char_info_cell);
+    //char_info_cell.innerHTML = "캐릭터 정보 입력";
+    char_select = document.createElement("select");
+    char_info_cell.appendChild(char_select);
+    char_list = getCharacterList();
+    for (i = 0; i < char_list.length; i++)
+        addSelelctOption(char_select, char_list[i], false);
+    
+    monster_info_cell = document.createElement("span");
+    info_space_div.appendChild(monster_info_cell);
+    monster_info_cell.innerHTML = "대상 몬스터 정보";
 }
